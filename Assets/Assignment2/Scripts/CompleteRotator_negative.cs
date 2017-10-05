@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CompleteRotator : MonoBehaviour {
+public class CompleteRotator_negative : MonoBehaviour {
 
-	public float deg;
+	public float degree;
 
 	//Update is called every frame
 	void Update () 
 	{
 		//Rotate thet transform of the game object this is attached to by 45 degrees, taking into account the time elapsed since last frame.
-		transform.Rotate (new Vector3 (0, 0, deg) * Time.deltaTime);
+		transform.Rotate (new Vector3 (0, 0, -degree) * Time.deltaTime);
 	}
 }
