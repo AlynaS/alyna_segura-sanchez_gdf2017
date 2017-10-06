@@ -135,11 +135,17 @@ public class CompletePlayerController : MonoBehaviour {
 	void SetScoreText()
 	{
 		//Set the text of planetText object to "Score: " followed by number of points collected
-		scoreText.text = "Score: " + score.ToString ();
+		scoreText.text = "Score: " + score.ToString () + "/110";
 
 		// Telling the player they won if they get 15 points
-		if (score >= 15) {
-			winText.text = "You Win!";
+		if (score >= 110) {
+			winText.text = "Hooray! You invaded enough the planets and collected all the necessary alien samples! The Galactic Council will be ecstatic for sure!";
+		}
+
+		float total = planets + aliens;
+
+		if ((total == 44) && (score < 110)) {
+			winText.text = "Awwww, sorry, you got lasered too many times. :'(";
 		}
 	}
 }
